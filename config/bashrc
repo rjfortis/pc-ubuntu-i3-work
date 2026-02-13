@@ -131,6 +131,10 @@ if [ -x "$HOME/.local/bin/mise" ]; then
   eval "$("$HOME/.local/bin/mise" activate bash)"
 fi
 
+# direnv
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook bash)"
+fi
 
 # User-specific aliases
 alias update="sudo apt update && sudo apt full-upgrade -y"
