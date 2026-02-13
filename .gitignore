@@ -1,0 +1,13 @@
+# Binary installers
+*.AppImage
+*.deb
+
+# Temporary files
+*.swp
+*~
+.DS_Store
+
+# Logs
+*.log
+
+# Folders that should not be in the repo
