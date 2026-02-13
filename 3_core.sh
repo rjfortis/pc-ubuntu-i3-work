@@ -20,30 +20,8 @@ sudo systemctl mask power-profiles-daemon.service 2>/dev/null || true
 # Using xserver-xorg-video-amdgpu for TearFree support without a compositor
 sudo apt install -y xorg xserver-xorg-core xserver-xorg-video-amdgpu xserver-xorg-input-libinput xinit mesa-utils libvulkan1
 
-# Configure AMD TearFree (Crucial since you won't use picom)
-sudo mkdir -p /etc/X11/xorg.conf.d
-sudo tee /etc/X11/xorg.conf.d/20-amdgpu.conf > /dev/null <<EOF
-Section "Device"
-    Identifier "AMD"
-    Driver "amdgpu"
-    Option "TearFree" "true"
-    Option "DRI" "3"
-EndSection
-EOF
-
 # --- Input Devices (Touchpad Tap-to-Click & Natural Scrolling) ---
 sudo apt install -y xinput libinput-tools
-sudo tee /etc/X11/xorg.conf.d/40-libinput.conf > /dev/null <<EOF
-Section "InputClass"
-    Identifier "libinput touchpad catchall"
-    MatchIsTouchpad "on"
-    DevicePath "/dev/input/event*"
-    Driver "libinput"
-    Option "Tapping" "on"
-    Option "NaturalScrolling" "true"
-    Option "AccelSpeed" "0.2"
-EndSection
-EOF
 
 # --- Display Manager & Desktop Lock ---
 sudo apt install -y lightdm lightdm-gtk-greeter
