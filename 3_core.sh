@@ -8,7 +8,7 @@ echo "=== Starting Optimized Installation ==="
 # --- System Update & Base Headers ---
 sudo apt update
 sudo apt full-upgrade -y
-sudo apt install -y build-essential curl wget git rsync zip unzip xdg-utils xclip dbus-x11 htop ca-certificates software-properties-common apt-transport-https
+sudo apt install -y build-essential curl wget git rsync zip unzip xdg-utils xclip dbus-x11 htop ca-certificates software-properties-common apt-transport-https libssl-dev libyaml-dev zlib1g-dev libreadline-dev
 
 # --- Power Management (Laptop Optimized) ---
 sudo apt install -y acpi
