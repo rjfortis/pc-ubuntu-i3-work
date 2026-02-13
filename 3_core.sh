@@ -11,10 +11,7 @@ sudo apt full-upgrade -y
 sudo apt install -y build-essential curl wget git rsync zip unzip xdg-utils xclip dbus-x11 htop ca-certificates software-properties-common apt-transport-https
 
 # --- Power Management (Laptop Optimized) ---
-sudo apt install -y acpi tlp tlp-rdw
-sudo systemctl enable tlp
-sudo systemctl start tlp
-sudo systemctl mask power-profiles-daemon.service 2>/dev/null || true
+sudo apt install -y acpi
 
 # --- Xorg & AMD Graphics Drivers ---
 # Using xserver-xorg-video-amdgpu for TearFree support without a compositor
