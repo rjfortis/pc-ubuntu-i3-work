@@ -40,7 +40,7 @@ link_config "config/gtk-3.0/settings.ini" "gtk-3.0/settings.ini"
 
 # --- Terminal & Apps ---
 link_config "config/alacritty/alacritty.toml" "alacritty/alacritty.toml"
-# link_config "config/zed/settings.json" "zed/settings.json"
+link_config "config/zed/settings.json" "zed/settings.json"
 # link_config "config/dunst/dunstrc" "dunst/dunstrc"
 
 

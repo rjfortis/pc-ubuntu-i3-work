@@ -62,6 +62,24 @@ sudo apt install -y lxappearance arc-theme papirus-icon-theme
 sudo apt autoremove -y
 sudo apt clean
 
+echo "=== Configuring Timezone and Sync ==="
+
+# Install the time synchronization daemon
+sudo apt update
+sudo apt install -y systemd-timesyncd
+
+# Set the timezone to El Salvador
+# This links /etc/localtime to the correct zoneinfo
+sudo timedatectl set-timezone America/El_Salvador
+
+# Enable Network Time Protocol (NTP) sync
+sudo timedatectl set-ntp true
+
+# Show current status to verify
+timedatectl status
+
+echo "✅ Timezone set to America/El_Salvador and NTP sync enabled."
+
 # Ensure standard folder structure (Downloads, Documents, etc.)
 sudo apt install -y xdg-user-dirs
 xdg-user-dirs-update
