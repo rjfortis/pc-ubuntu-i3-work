@@ -58,8 +58,8 @@ bindsym $mod+Shift+l move right
 
 # --- Layout Toggle ---
 bindsym $mod+f fullscreen toggle
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+v split v
 bindsym $mod+b split h
 bindsym $mod+Shift+space floating toggle
