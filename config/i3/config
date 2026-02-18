@@ -25,7 +25,7 @@ exec --no-startup-id redshift -x && redshift -O 4500
 # --- Keybindings (Apps) ---
 bindsym $mod+Return exec alacritty
 bindsym $mod+d exec rofi -show drun -show-icons
-bindsym $mod+e exec pcmanfm
+#bindsym $mod+e exec pcmanfm
 bindsym $mod+Shift+q kill
 
 # --- Audio Control ---
